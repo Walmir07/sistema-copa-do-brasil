@@ -158,3 +158,41 @@ function apresentarJogo(){
 function byId(id){
   return document.getElementById(id)
 }
+
+let confrontos = [];
+
+function addTime() {
+  let nomeT = document.getElementById("nomeConf").value;
+  confrontos.push(nomeT);
+  placares();
+}
+
+function montarOpcoesTimes() {
+  let opcoes = "<select>";
+  for(let i of confrontos) {
+    opcoes += "<option>"+i+"</option>";
+  }
+  opcoes += "</select>";
+  return opcoes;
+}
+
+function componenteJogo() {
+  // select com times + input + X + input + times
+  let jogo = montarOpcoesTimes();
+  const input = '<input type="text">';
+  jogo += input + '<strong>X</strong>' + input;
+  jogo += montarOpcoesTimes();
+  return jogo;
+}
+
+function placares() {
+  const comJogo = componenteJogo();
+  let placar = "";
+  for(let i = 1; i <= 6; i++) {
+    placar += comJogo + "<br>";
+  }
+  let div = document.getElementById("placar");
+  div.innerHTML = placar;
+}
+
+placares();

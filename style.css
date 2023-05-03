@@ -1,10 +1,42 @@
 html {
   height: 100%;
   width: 100%;
-  background-color: aqua;
-}
-h1{
-  text-align: center;
-  color: green;
+  background: rgb(16,0,255);
+background: linear-gradient(260deg, rgba(16,0,255,1) 0%, rgba(1,255,0,1) 87%);
 }
 
+h1{
+  text-align: center;
+  color: #000;
+}
+.box{
+  width: 300px;
+  height: 300px;
+}
+.box{
+  border-radius: 20px;
+  width: 300px;
+  height: 300px;
+  background: rgb(5,255,0);
+  background: linear-gradient(260deg, rgba(5,255,0,1) 28%, 
+  rgba(0,236,255,1) 64%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 5px solid;
+}
+strong{
+  color: red;
+  font-family: Georgia;
+}
+
+#botaoAdd{
+  background-color: green;
+}
+#botaoCad{
+  background-color: green;
+}
+#corNomeT{
+  color: black;
+}
